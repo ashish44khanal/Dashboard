@@ -1,0 +1,87 @@
+$primaryColor:#006699;
+$primaryDark:#024b70;
+$Gray:#FBFBFF;
+$GrayD:#d4d4d4;
+$Pink:#ef3054;
+$Green:#2ec4b6;
+$Dark:#0c120c;
+
+.bg-primary{
+    background-color: $primaryColor;
+}
+.bg-primaryD{
+    background-color: $primaryDark;
+}
+.bg-gray{
+    background-color: $Gray;
+}
+.bg-grayD{
+    background-color: $GrayD;
+}
+h1{
+    font-size: xx-large;
+    font-weight: bold;
+}
+h2{
+    font-size: x-large;
+    font-weight: bold;
+}
+h3{
+    font-size: larger;
+    font-weight: bold;
+}
+h4{
+    font-size: large;
+    font-weight: bold;
+}
+h5{
+    font-size: medium;
+    font-weight: bold;
+}
+h6{
+    font-weight: bold;
+}
+@mixin btn($bg,$color) {
+    background-color: $bg;
+    color: $color;
+    padding: 10px 20px;
+    transition: all 0.2s;
+    &:hover{
+        opacity: 0.8;
+        transition: all 0.2s;
+    }
+}
+.btn-primary{
+    @include btn($primaryColor,white )
+}
+@mixin btn-outline($color, $border) {
+    border: 1px solid $border;
+    color: $color;
+    padding: 10px 20px;
+    transition: all 0.2s;
+    &:hover{
+        opacity: 0.8;
+        transition: all 0.2s;
+    }
+}
+.btn-outline-primary{
+    @include btn-outline($primaryColor,$primaryColor)
+}
+
+.card{
+    background-color: white;
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.06);
+    padding: 1rem;
+}
+body::-webkit-scrollbar {
+  width: 0.8rem;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(117, 136, 144);
+  outline: 1px solid slategrey;
+}
